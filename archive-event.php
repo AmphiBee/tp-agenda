@@ -23,15 +23,7 @@ get_header();
 		<?php if (have_posts()) : ?>
 			<ul class="events">
 				<?php while (have_posts()) : the_post(); ?>
-					<li>
-						<a href="<?php the_permalink(); ?>">
-							<?php if (has_post_thumbnail()) : ?>
-								<?php the_post_thumbnail(); ?>
-							<?php endif; ?>
-							<?php the_field('date'); ?>
-							<?php the_content(); ?>
-						</a>
-					</li>
+					<?php get_template_part('parts/content', 'event'); ?>
 				<?php endwhile; ?>
 			</ul>
 		<?php endif; ?>

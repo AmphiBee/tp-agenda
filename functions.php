@@ -26,3 +26,5 @@ function mon_theme_assets()
 add_action('after_setup_theme', function () {
 	add_theme_support('post-thumbnails');
 });
+
+add_image_size('event-image', 100, 100, true);
