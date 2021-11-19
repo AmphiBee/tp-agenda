@@ -7,6 +7,8 @@ add_action('init', function () {
 			'singular_name' => 'Évènement',
 			'menu_name' => 'Évènement'
 		],
+		'rewrite' => ['slug' => 'evenement'],
+		'has_archive' => true,
 		'hierarchical'        => false, // de type chronologique
 		'public'              => true,
 	]);
