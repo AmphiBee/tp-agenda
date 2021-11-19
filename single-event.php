@@ -30,7 +30,9 @@ get_header();
 		?>
 				<div class="event">
 					<h1><?php the_title(); ?></h1>
-					<time>12/08/2021</time>
+					<?php if ($event_date = get_field('event_date')) : ?>
+						<time><?php echo $event_date; ?></time>
+					<?php endif; ?>
 					<?php the_content(); ?>
 				</div>
 		<?php
