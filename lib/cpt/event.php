@@ -11,6 +11,7 @@ add_action('init', function () {
 		'has_archive' => true,
 		'hierarchical'        => false, // de type chronologique
 		'public'              => true,
+		'supports' => ['title', 'editor', 'thumbnail']
 	]);
 
 	// Déclaration d'une classification de type catégorie d'évènement

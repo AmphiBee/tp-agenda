@@ -25,6 +25,9 @@ get_header();
 				<?php while (have_posts()) : the_post(); ?>
 					<li>
 						<a href="<?php the_permalink(); ?>">
+							<?php if (has_post_thumbnail()) : ?>
+								<?php the_post_thumbnail(); ?>
+							<?php endif; ?>
 							<?php the_field('date'); ?>
 							<?php the_content(); ?>
 						</a>
