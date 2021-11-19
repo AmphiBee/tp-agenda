@@ -34,6 +34,17 @@ get_header();
 						<time><?php echo $event_date; ?></time>
 					<?php endif; ?>
 					<?php the_content(); ?>
+
+					<div class="other-event">
+						<?php
+						if (have_rows('dates')) {
+							while (have_rows('dates')) {
+								the_row();
+								echo get_sub_field('date');
+							}
+						}
+						?>
+					</div>
 				</div>
 		<?php
 			}
