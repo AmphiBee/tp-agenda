@@ -1,0 +1,14 @@
+.related-events {
+	background-color: #fff;
+	padding: 10px;
+}
+.related-events img {
+	width: 35% !important;
+	margin-right: 20px;
+}
+
+
+.related-events li {
+	display: flex;
+	padding: 10px;
+}

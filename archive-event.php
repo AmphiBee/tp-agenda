@@ -20,6 +20,11 @@ get_header();
 
 <div id="primary" class="content-area">
 	<main id="main" class="site-main">
+		<?php
+		wp_nav_menu([
+			'menu' => 'event-menu',
+		]);
+		?>
 		<?php dynamic_sidebar('before-main-sidebar'); ?>
 		<?php if (have_posts()) : ?>
 			<ul class="events">
