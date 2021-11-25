@@ -52,6 +52,25 @@ get_header();
 		?>
 
 	</main><!-- .site-main -->
+
+	<?php
+
+
+
+	?>
+	<?php if (function_exists('event_related_posts')) : ?>
+		<?php
+		$related_posts = event_related_posts();
+		?>
+		<?php if ($related_posts && $related_posts->have_posts()) : ?>
+			<h2>Évènements en relation</h2>
+			<ul>
+				<?php while ($related_posts->have_posts()) : $related_posts->the_post(); ?>
+					<?php get_template_part('parts/content', 'event'); ?>
+				<?php endwhile; ?>
+			</ul>
+		<?php endif; ?>
+	<?php endif; ?>
 </div><!-- .content-area -->
 
 <?php
